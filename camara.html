@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoTips - Cámara</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="pantalla centrado">
+    <h2 id="tituloTarea"></h2>
+    <video id="video" autoplay playsinline></video>
+    <button class="boton" onclick="capturar()">Tomar Foto 📸</button>
+    <canvas id="canvas" style="display:none;"></canvas>
+    <br />
+    <button class="boton" onclick="irAlMenu()">Volver al Menú</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

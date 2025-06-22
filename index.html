@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoTips - Ingreso</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 🎥 Video de fondo -->
+  <video autoplay muted loop id="videoFondo">
+    <source src="my-most-beautiful-drone-shot--cinematic-fpv-on-an-empty-beach.mp4" type="video/mp4" />
+    Tu navegador no soporta el video HTML5.
+  </video>
+
+  <!-- 🔊 Audio de fondo -->
+  <audio id="audioFondo" loop>
+    <source src="this-melody--slowed-to-perfection.mp3" type="audio/mp3" />
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <div class="pantalla centrado">
+    <h2>Ingresa tu nombre</h2>
+    <input type="text" id="inputNombre" placeholder="Tu nombre" />
+    <br /><br />
+    <button class="boton" onclick="guardarNombre()">Ingresar</button>
+  </div>
+
+  <script>
+    // Activar audio al primer clic
+    document.addEventListener("click", () => {
+      const audio = document.getElementById("audioFondo");
+      if (audio && audio.paused) {
+        audio.play().catch((e) => console.log("No se pudo reproducir el audio:", e));
+      }
+    }, { once: true });
+  </script>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
